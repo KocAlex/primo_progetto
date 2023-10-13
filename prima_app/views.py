@@ -22,5 +22,3 @@ def variabili(request):
                "var3" : "Terza variabile"
                }
     return render(request, "variabili.html", context)
-
-
