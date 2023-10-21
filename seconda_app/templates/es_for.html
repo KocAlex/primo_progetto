@@ -1,74 +1,77 @@
+{%extends "base.html"%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{%block title%}{{block.super}} | For{%endblock title%}</title>
 </head>
 <body>
-    <br>
-    <p>Cicla una sequenza usando <b>forloop.counter</b></p>
+    {%block content%}
+        <br>
+        <p>Cicla una sequenza usando <b>forloop.counter</b></p>
 
-    {% for x in list2 %}
-        <p><i>{{forloop.counter}}</i> : {{x}} </p> <br>
-    {% endfor %}
+        {% for x in list2 %}
+            <p><i>{{forloop.counter}}</i> : {{x}} </p> <br>
+        {% endfor %}
 
-    <br>
-    <p>Cicla una sequenza usando <b>forloop.counter0</b></p>
+        <br>
+        <p>Cicla una sequenza usando <b>forloop.counter0</b></p>
 
-    {% for x in list2 %}
-        <p><i>{{forloop.counter0}}</i> : {{x}} </p> <br>
-    {% endfor %}
+        {% for x in list2 %}
+            <p><i>{{forloop.counter0}}</i> : {{x}} </p> <br>
+        {% endfor %}
 
-    <br>
-    <p>Stampa il primo elemento della sequenza usando <b>forloop.first</b></p>
+        <br>
+        <p>Stampa il primo elemento della sequenza usando <b>forloop.first</b></p>
 
-    {% for x in list2 %}
-        {% if forloop.first %}
-        <p><i>Il primo elemento</i> - {{ x }} </p> <br>
-        {% endif %}
-    {% endfor %}
-
-
-    <br>
-    <p>Stampa l'ultimo elemento della lista usando <b>forloop.last</b></p>
-
-    {% for x in list2 %}
-        {% if forloop.last %}
-        <p><i>Il primo elemento</i> - {{ x }} </p> <br>
-        {% endif %}
-    {% endfor %}
-
-    <br>
-    <p>Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter</b></p>
-    <br>
-    {% for x in list2 %}
-       <p><i>Numero degli elementi da dover ancora ciclare</i> - {forloop.revcounter}</p>
-       <p><i>Elemento</i> - {{x}}</p>
-    {% endfor %}
-
-    <br>
-    <p>Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter0</b></p>
-    <br>
-    {% for x in list2 %}
-       <p><i>Numero degli elementi da dover ancora ciclare</i> - {forloop.revcounter0}</p>
-       <p><i>Elemento</i> - {{x}}</p>
-    {% endfor %}
+        {% for x in list2 %}
+            {% if forloop.first %}
+            <p><i>Il primo elemento</i> - {{ x }} </p> <br>
+            {% endif %}
+        {% endfor %}
 
 
-    <br>
-    <p>Stampa la sequenza al contrario usando <b>reversed</b>, attributo del tag <b>for</b></p>
-    <br>
-    {% for x in list2 reversed %}
-       <p><i>Elemento</i> - {{x}}</p>
-    {% endfor %}
+        <br>
+        <p>Stampa l'ultimo elemento della lista usando <b>forloop.last</b></p>
 
-    <hr>
-    <h2>Contenuto del dizionario:</h2>
-    <ul>
-        {%for key, value in my_dict.items%}
-        <li>{{key}}: {{value}}</li>
-        {%endfor%}
-    </ul>
+        {% for x in list2 %}
+            {% if forloop.last %}
+            <p><i>Il primo elemento</i> - {{ x }} </p> <br>
+            {% endif %}
+        {% endfor %}
+
+        <br>
+        <p>Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter</b></p>
+        <br>
+        {% for x in list2 %}
+        <p><i>Numero degli elementi da dover ancora ciclare</i> - {forloop.revcounter}</p>
+        <p><i>Elemento</i> - {{x}}</p>
+        {% endfor %}
+
+        <br>
+        <p>Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter0</b></p>
+        <br>
+        {% for x in list2 %}
+        <p><i>Numero degli elementi da dover ancora ciclare</i> - {forloop.revcounter0}</p>
+        <p><i>Elemento</i> - {{x}}</p>
+        {% endfor %}
+
+
+        <br>
+        <p>Stampa la sequenza al contrario usando <b>reversed</b>, attributo del tag <b>for</b></p>
+        <br>
+        {% for x in list2 reversed %}
+        <p><i>Elemento</i> - {{x}}</p>
+        {% endfor %}
+
+        <hr>
+        <h2>Contenuto del dizionario:</h2>
+        <ul>
+            {%for key, value in my_dict.items%}
+            <li>{{key}}: {{value}}</li>
+            {%endfor%}
+        </ul>
+    {%endblock content%}
 </body>
 </html>
