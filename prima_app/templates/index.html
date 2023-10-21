@@ -1,11 +1,13 @@
+{%extends "base.html"%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>{%block title%}{{block.super}} | Index{%endblock title%}</title>
 </head>
 <body>
+    {%block content%}
     <ol>
         <li><a href="/">Root</a></li>
         <li><a href="{% url 'prima_app:homepage'%}">Homepage</a></li>
@@ -14,5 +16,6 @@
         <li><a href="{% url 'prima_app:chi_siamo'%}">Chi siamo</a></li>
         <li><a href="{% url 'prima_app:variabili'%}">Variabili</a></li>
     </ol>
+    {%endblock content%}
 </body>
 </html>

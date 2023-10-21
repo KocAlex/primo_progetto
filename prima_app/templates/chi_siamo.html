@@ -1,11 +1,13 @@
+{%extends "base.html"%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi siamo</title>
+    <title>{% block title %} {{block.super}} | Chi siamo {% endblock title %}</title>
 </head>
 <body>
+    {%block content%}
     <h1>Chi siamo</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut libero et diam ultrices interdum eu vel sapien. Quisque lobortis pulvinar arcu, non vulputate diam congue at. Nulla nec libero varius, lacinia lacus quis, scelerisque est. Cras orci massa, vestibulum sed enim ut, sollicitudin molestie nisi. Etiam placerat ultrices mattis. Nunc vitae nisl urna. Sed malesuada quam quis rhoncus scelerisque. Nunc ac tellus euismod, lacinia lectus iaculis, porttitor leo. Donec sem lorem, tristique quis rutrum non, facilisis sit amet nulla. Integer sit amet sem odio. Nunc condimentum venenatis bibendum. Ut ullamcorper erat eu libero dictum, non suscipit urna semper. Integer ac enim sit amet nibh mollis volutpat eu ac metus.
 
@@ -16,5 +18,6 @@
         Vivamus malesuada, mauris sit amet fermentum suscipit, ex felis commodo ipsum, eu tincidunt metus ante ac enim. Ut placerat, felis eget fringilla ultrices, ipsum metus sollicitudin leo, ac suscipit nibh lacus quis leo. Proin sagittis vitae dui id consequat. Nulla fringilla aliquam maximus. Quisque ac sapien vel magna hendrerit varius. Mauris quis sapien porta, faucibus tortor at, elementum turpis. Aliquam fermentum eleifend nunc, vitae pretium justo maximus quis. Proin a ante laoreet tortor sagittis hendrerit. Vestibulum euismod elit quis faucibus lacinia. Praesent porttitor quam vel felis aliquet ultricies.
         
         Ut nec blandit nibh. Curabitur vel sodales massa. Phasellus eu ipsum sed mauris faucibus gravida. Nunc tincidunt massa et nunc placerat, nec eleifend magna imperdiet. Donec ut condimentum metus. Morbi lacinia sed orci vel molestie. Nunc egestas est magna. Etiam sagittis et augue vel scelerisque. Aliquam mauris risus, blandit ac velit dapibus, vehicula consectetur ex. Cras quam tortor, aliquam sit amet nibh a, tempor vulputate nisi. In hac habitasse platea dictumst. Nullam non posuere dui. Sed ac volutpat magna, ut sodales nisl. Pellentesque condimentum, nulla ac rutrum efficitur, lectus ligula sollicitudin magna, sed commodo felis nulla id nibh. Proin ut imperdiet ipsum.</p>
+    {%endblock content%}
 </body>
 </html>
