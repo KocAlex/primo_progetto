@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%block title%}
+    Articoli e Giornalisti
+{%endblock title%}
+{%block content%}
+<h4>Articoli:</h4>
+    {% for articolo in articoli%}
+        <p><strong>Titolo: </strong>{{articolo.titolo}}</p>
+        <p><strong>Contenuto: </strong>{{articolo.contenuto}}</p>
+        <p><strong>Autore: </strong>{{articolo.giornalista}}</p>
+        <hr>
+    {%endfor%}
+<h4>Giornalisti:</h4>
+    {% for giornalista in giornalisti%}
+        <p><strong>Nome: </strong>{{giornalista.nome}}</p>
+        <p><strong>Cognome: </strong>{{giornalista.cognome}}</p>
+        <hr>
+    {%endfor%}
+{%endblock content%}
