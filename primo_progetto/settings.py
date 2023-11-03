@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'prima_app',
     'seconda_app',
     'news',
+    'prova_pratica_1',
 ]
 
 MIDDLEWARE = [

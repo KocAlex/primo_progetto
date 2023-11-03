@@ -1,0 +1,23 @@
+{% extends "base_prova.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {{block.super}} | Somma {%endblock title%}</title>
+</head>
+<body>
+    {%block content%}
+    
+        {% if n1 > n2 %}
+        <h1><i class = "text-success">{{n1}}</i> + <i class = "text-danger">{{n2}}</i> = {{somma}}</h1>
+        {% endif%}
+        {% if n2 > n1 %}
+        <h1><i class = "text-danger">{{n1}}</i> + <i class = "text-success">{{n2}}</i> = {{somma}}</h1>
+        {% endif %}
+        {% if n1 == n2 %}
+        <h1><i>{{n1}}</i> + <i>{{n2}}</i> = {{somma}}</h1>
+        {% endif %}
+    {%endblock content%}
+</body>
+</html>
