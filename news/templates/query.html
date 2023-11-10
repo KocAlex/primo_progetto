@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{%block title%}
+    Query
+{%endblock title%}
+
+{%block content%}  
+    <ol>
+        <li>Numero di articoli di "Gianmarco Tocco" = {{numero_articoli_giornalista_1}}</li>
+        <li>Articoli ordinati = {{articoli_ordinati}}</li>
+        <li>articoli senza visualizzazioni = {{articoli_senza_visualizzazioni}}</li>
+        <li>articolo più visualizzato = {{articolo_piu_visualizzato}}</li>
+        <li>giornalisti data = {{giornalisti_data}}</li>
+        <li>articoli del giorno = {{articoli_del_giorno}}</li>
+        <li>articoli periodo = {{articoli_periodo}}</li>
+        <li>articoli giornalisti = {{articoli_giornalisti}}</li>
+        <li>giornalista giovane = {{giornalista_giovane}}</li>
+        <li>ultimi = {{ultimi}}</li>
+        <li>articoli minime visualizzazioni = {{articoli_minime_visualizzazioni}}</li>
+        <li>articoli parola = {{articoli_parola}}</li>
+    </ol>    
+{%endblock content%}
