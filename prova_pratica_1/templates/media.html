@@ -1,0 +1,26 @@
+{% extends "base_prova.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {{block.super}} | Media {%endblock title%}</title>
+</head>
+<body>
+    {%block content%}
+        {% for valore in listaVal %}
+            <h5 class = "d-inline">{{valore}};</h5>
+        {% endfor %}
+
+        {%if media > 6 %}
+        <h1>Media: <i class = "text-success">{{media}}</i></h1>
+        {%endif%}
+        {%if media < 6 %}
+        <h1>Media: <i class = "text-danger">{{media}}</i></h1>
+        {%endif%}
+        {%if media == 6 %}
+        <h1>Media: <i>{{media}}</i></h1>
+        {%endif%}
+    {%endblock content%}
+</body>
+</html>

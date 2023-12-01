@@ -1,0 +1,33 @@
+{% extends "base_prova.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%} {{block.super}} | Voti {%endblock title%}</title>
+</head>
+<body>
+    {%block content%}
+    <table class = "table">
+        <tr>
+            <td>
+                Studente
+            </td>
+            <td>
+                Voto
+            </td>
+        </tr>
+        {% for studente, voto in dizionario.items %}
+        <tr>
+            <td>
+                <h5>{{studente}}</h5>
+            </td>
+            <td>
+                <h5>{{voto}}</h5>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {%endblock content%}
+</body>
+</html>

@@ -1,0 +1,166 @@
+{% extends "base.html"%}
+{%block title%}
+    Query
+{%endblock title%}
+
+{%block content%}  
+    <ol>
+        <li>Articoli di "Rossi" 
+            <ul>
+                {% for articolo in articoli_cognome %}
+                <li>
+                    {{articolo.titolo}}
+                </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Numero totale articoli = {{numero_totale_articolo}}</li>
+        
+        <li>Numero di articoli di "Gianmarco Tocco" = {{numero_articoli_giornalista_1}}</li>
+        
+        <li>Articoli ordinati 
+            <ul>
+                {% for articolo in articoli_ordinati %}
+                <li>
+                    {{articolo.titolo}}
+                </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli senza visualizzazioni
+            <ul>
+                {% for articolo in articoli_senza_visualizzazioni %}
+                <li>
+                    {{articolo.titolo}}
+                </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articolo più visualizzato = {{articolo_piu_visualizzato}}</li>
+
+        <li>Giornalisti nati dopo il 1/1/1990
+            <ul>
+                {% for giornalista in giornalisti_data %}
+                    <li>
+                        {{giornalista.nome}} <b>{{giornalista.cognome}}</b>
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli del giorno 
+            <ul>
+                {% for articolo in articoli_del_giorno %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli periodo
+            <ul>
+                {% for articolo in articoli_periodo %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli giornalisti 
+            <ul>
+                {% for articolo in articoli_giornalisti %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Giornalista giovane = {{giornalista_giovane}}</li>
+
+        <li>Ultimi 
+            <ul>
+                {% for giornalista in ultimi %}
+                    <li>
+                        {{giornalista.cognome}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli minime visualizzazioni
+            <ul>
+                {% for articolo in articoli_minime_visualizzazioni %}
+                    <li>
+                        {{articolo.titolo}} - {{articolo.visualizzazioni}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli parola
+            <ul>
+                {% for articolo in articoli_parola %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli mese anno 
+            <ul>
+                {% for articolo in articoli_mese_anno %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Giornalisti con articoli popolari
+            <ul>
+                {% for giornalista in giornalisti_con_articoli_popolari %}
+                    <li>
+                        {{giornalista.cognome}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+
+        <li>Articoli con AND
+            <ul>
+                {% for articolo in articoli_con_and %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+        
+        <li>Articoli con OR 
+            <ul>
+                {% for articolo in articoli_con_or %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+        
+        <li>Articoli con NOT 
+            <ul>
+                {% for articolo in articoli_con_not %}
+                    <li>
+                        {{articolo.titolo}}
+                    </li>
+                {%endfor%}
+            </ul>
+        </li>
+    </ol>    
+{%endblock content%}
