@@ -53,8 +53,8 @@
         <p>Stampa il numero degli elementi non ancora ciclati usando <b>forloop.revcounter0</b></p>
         <br>
         {% for x in list2 %}
-        <p><i>Numero degli elementi da dover ancora ciclare</i> - {forloop.revcounter0}</p>
-        <p><i>Elemento</i> - {{x}}</p>
+            <p><i>Numero degli elementi da dover ancora ciclare</i> - {forloop.revcounter0}</p>
+            <p><i>Elemento</i> - {{x}}</p>
         {% endfor %}
 
 
@@ -69,7 +69,7 @@
         <h2>Contenuto del dizionario:</h2>
         <ul>
             {%for key, value in my_dict.items%}
-            <li>{{key}}: {{value}}</li>
+                <li>{{key}}: {{value}}</li>
             {%endfor%}
         </ul>
     {%endblock content%}
