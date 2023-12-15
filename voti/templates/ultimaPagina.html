@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+    {%block title%}{{block.super}} | Max Voti{%endblock title%}
+
+    {%block content%}
+        <h1>Massimo voti</h1>
+        <ul>
+            {%for chiave, valori in diz.items%}
+                <li>
+                    {{chiave}}: {{valori.0}} in {{valori.1}} di {{valori.2}}
+                </li>
+            {%endfor%}
+        </ul>
+    {%endblock content%}

@@ -1,0 +1,25 @@
+{%extends "base.html"%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{{block.super}} | Dizionario{%endblock title%}</title>
+</head>
+<body>
+    {%block content%}
+        <h1>Dizionario</h1>
+        <ul>
+            {%for nome, pagella in voti.items%}
+                <li>{{nome}}
+                    <ul>
+                        {%for voto in pagella%}
+                            <li>{{voto.0}} : {{voto.1}} | Assenze: {{voto.2}}</li>
+                        {%endfor%}
+                    </ul>
+                </li>
+            {%endfor%}
+        </ul>
+    {%endblock content%}
+</body>
+</html>

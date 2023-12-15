@@ -1,0 +1,10 @@
+{%extends "base.html"%}
+    {%block title%}{{block.super}} | Medie{%endblock title%}
+    {%block content%}
+        <h1>Medie</h1>
+        <ul>
+            {%for nome, media in medie.items %}
+                <li>{{nome}} = {{media}}</li>
+            {%endfor%}
+        </ul>
+    {%endblock content%}
