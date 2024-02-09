@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-l=+0!m+2(dvop3!mok^03m%tvs392dpc=r^q%njc$@qk(oh2pu
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'seconda_app',
     'news',
     'prova_pratica_1',
+    'corsheaders',
+    'products'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'primo_progetto.urls'
