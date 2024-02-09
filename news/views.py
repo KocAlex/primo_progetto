@@ -212,7 +212,7 @@ def articolo_api(request, pk):
     except Articolo.DoesNotExist:
         response = JsonResponse({
             "error":{
-                "code":404,
+                "code": 404,
                 "message":"Articolo non trovato"
             }
         }, status = 404)
