@@ -194,7 +194,7 @@ def giornalista_api(request, pk):
 
 def articoli_list_api(request):
     articoli = Articolo.objects.all()
-    data = {'articolo':list(articoli.values("pk", "titolo", "giornalista"))}
+    data = {"articoli":list(articoli.values("pk", "titolo", "contenuto", "giornalista"))}
     response = JsonResponse(data)
     return response
 
