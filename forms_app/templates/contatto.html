@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+{%load crispy_forms_tags %}
+{%block head_title%}{{block.super}} | Contatti{%endblock head_title%}
+
+{%block content%}
+<div class = "container">
+    <h1>Compila il form di contatto, ti risponderemo quanto prima!</h1>
+
+    <form method = "post">
+        {%csrf_token%}
+        {{form|crispy}}
+        <input type = "submit" class = "btn btn-danger" value = "INVIA">
+    </form>
+</div>
+{%endblock content%}

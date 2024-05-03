@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import index
 urlpatterns = [
+    path('', index, name = 'index'),
     path('admin/', admin.site.urls),
     path('prima_app/', include("prima_app.urls", namespace = "prima_app")),
     path('seconda_app/', include("seconda_app.urls", namespace = "seconda_app")),
@@ -25,6 +26,7 @@ urlpatterns = [
     path('store/', include("products.urls", namespace = "store")), 
     path('prova_pratica_1/', include("prova_pratica_1.urls", namespace = "prova_pratica_1")),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', index, name = 'index'),
+    #path('contattaci/', include("forms_app.urls", namespace = "contattaci"))
+    path('forms_app/', include("forms_app.urls", namespace = "forms_app")),
 ]
 

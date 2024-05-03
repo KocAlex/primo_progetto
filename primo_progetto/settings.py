@@ -39,12 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'prima_app',
     'seconda_app',
     'news',
     'prova_pratica_1',
     'corsheaders',
-    'products'
+    'products',
+    'forms_app',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +70,7 @@ TEMPLATES = [
                  os.path.join(BASE_DIR,'prima_app/templates'),
                  os.path.join(BASE_DIR,'seconda_app/templates'),
                  os.path.join(BASE_DIR,'news/templates'),
+                 os.path.join(BASE_DIR,'forms_app/templates'),
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -114,6 +118,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOGIN_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
